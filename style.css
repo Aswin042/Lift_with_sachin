@@ -1,0 +1,433 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DARK MODE SETTINGS */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #050505; /* Deep Black Background */
+    color: #ffffff; /* White Text */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- INSTAGRAM LINK FIXES --- */
+.top-insta-link {
+    position: absolute;
+    /* Moved up to 10px to fit the large logo nicely */
+    top: 10px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.top-insta-link:hover {
+    opacity: 0.8;
+}
+
+.top-insta-link img {
+    /* INCREASED SIZE TO 120px AS REQUESTED */
+    width: 120px;
+    height: auto;
+    display: block; /* Removes extra spacing below image */
+}
+
+.top-insta-link span {
+    font-weight: 600;
+    /* TEXT SIZE REMAINS SAME */
+    font-size: 1rem;
+    margin-left: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+/* --- END INSTAGRAM FIXES --- */
+
+
+/* Logo Alignment */
+.logo-container {
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.8);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #ddd;
+    font-weight: 300;
+}
+
+/* Main Button Style */
+.btn {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+.btn:hover {
+    background-color: #d62828;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+}
+
+/* Section Styling */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e63946;
+    margin: 15px auto 0;
+}
+
+
+/* About */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-content img {
+    max-width: 350px;
+    border-radius: 20px;
+    align-self: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-content p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 0;
+    color: #e0e0e0;
+    display: grid;
+    gap: 10px;
+}
+
+.about-content ul li::before {
+    content: '•';
+    color: #e63946;
+    font-size: 1.5rem;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+
+/* Services and other lists */
+#services ul,
+#education ul,
+#career ul,
+#achievements ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    gap: 15px;
+}
+
+#services ul li,
+#education ul li,
+#career ul li,
+#achievements ul li {
+    background: #121212;
+    color: white;
+    padding: 20px 25px;
+    border-left: 4px solid #e63946;
+    border-radius: 8px;
+    border: 1px solid #222;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+#services ul li:hover,
+#education ul li:hover,
+#career ul li:hover,
+#achievements ul li:hover {
+    transform: translateX(10px);
+}
+
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.benefit-box {
+    background: #121212;
+    color: #e0e0e0;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.benefit-box:hover {
+    transform: translateY(-10px);
+    border-color: #e63946;
+}
+
+.benefit-box h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* --- TRANSFORMATIONS GALLERY (FULL IMAGE VISIBLE) --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    border: none;
+    padding: 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease;
+    aspect-ratio: 3 / 4;
+}
+
+/* The Zig-Zag shift effect */
+.gallery-item.shifted {
+   margin-top: 80px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0.95);
+    transition: filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+    filter: brightness(1.1);
+}
+/* --- END Gallery --- */
+
+/* --- Packages Grid --- */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.package-box {
+    background: #121212;
+    color: #ddd;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.package-box h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.package-box .price-details {
+    margin-bottom: 25px;
+}
+
+.package-box .price-details p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.package-box .price-details span {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.package-box ul {
+    list-style: none;
+    margin-top: auto;
+    border-top: 1px dashed #333;
+    padding-top: 20px;
+    color: #ccc;
+}
+
+.package-box ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding-left: 25px;
+    position: relative;
+}
+
+.package-box ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #e63946;
+    font-weight: bold;
+}
+
+.featured {
+    border: 2px solid #e63946;
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    transform: scale(1.05);
+}
+.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+/* --- END Packages --- */
+
+
+/* Contact Section */
+#contact .contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+#contact p {
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+#contact a {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #ff7b7b;
+}
+
+/* WhatsApp Button Text - Forced White */
+#contact a.btn {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+
+/* Footer */
+footer {
+    background: #080808;
+    color: #777;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.9rem;
+}
+
+
+/* Responsive Design Adjustments */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+    .hero-content h1 { font-size: 4.5rem; }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .gallery-item.shifted {
+        margin-top: 0;
+    }
+    .top-insta-link {
+        top: 20px; right: 20px;
+    }
+    /* Hide text on very small screens, keep big icon */
+    .top-insta-link span { display: none; }
+    .top-insta-link img { width: 60px; } /* Set reasonable mobile size */
+}
